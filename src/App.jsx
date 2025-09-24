@@ -6,11 +6,13 @@ import axios from "axios";
 import moment from "moment"; 
 import "moment/locale/ar";   
 import "moment/locale/en-gb";
+
 import { useTranslation } from 'react-i18next';
 
 let axiosConnection = null;
 function App() {
     const { t, i18n } = useTranslation();
+  const apiKey = import.meta.env.VITE_WEATHER_API;
   const [temp,setTemp]=useState(null)
   const [min,setMin]=useState(null)
   const [max,setMax]=useState(null)
@@ -20,10 +22,11 @@ function App() {
     const newLang = i18n.language === 'ar' ? 'en' : 'ar';
     i18n.changeLanguage(newLang)
   }
+
   useEffect(() => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=30.044&lon=31&appid=dc01084a6a99bdc0a0e73323edce8ac6`,
+        `https://api.openweathermap.org/data/2.5/weather?lat=30.044&lon=31&appid=${apiKey}`,
         {
 cancelToken: new axios.CancelToken((c) => {
             axiosConnection = c;
