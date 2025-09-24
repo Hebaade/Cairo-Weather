@@ -88,7 +88,7 @@ cancelToken: new axios.CancelToken((c) => {
                   </div>
                 </div>
                 
-                  <CloudIcon style={{ fontSize: 200, color:'white' }} />
+                  <CloudIcon style={{ fontSize: 200, color:'white' }} className="cloud" />
                 
               </div>
             </div>

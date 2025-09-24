@@ -113,13 +113,14 @@ body {
 }
 @media (max-width: 600px) {
   .content-container {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     padding: 0 8px;
   }
   .card {
     padding: 16px 8px;
     margin: 16px auto;
+
   }
   .weather {
     flex-direction: column;
@@ -138,6 +139,11 @@ body {
     font-size: 2rem;
     margin-bottom: 8px;
   }
+  .content{
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+  }
   .content h3 {
     margin-top: 16px;
   }
@@ -154,4 +160,7 @@ body {
   hr {
     margin: 24px 0;
   }
+ .cloud{
+  margin: auto;
+ }
 }
